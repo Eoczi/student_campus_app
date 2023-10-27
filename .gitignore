@@ -1,0 +1,33 @@
+# Node.js and Express
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# .env file containing sensitive data
+.env
+
+# MySQL
+*.sql
+*.log
+data/
+backup/
+logs/
+
+# React
+build/
+dist/
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# IDE
+.vscode/
+.idea/
+
+# Log files and other generated files
+*.log
+*.log.*
+*.pid
+*.seed
+*.pid.lock
+
