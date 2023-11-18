@@ -12,17 +12,10 @@ const connection = mysql.createConnection({
 
 connection.connect(function (error) {
   if (error) {
+    console.log("Error with database");
     throw error;
   } else {
-    console.log("MySQL Database is connected Successfully");
-    connection.query("SELECT * FROM ID_TABLE", function (err, results, fields) {
-      if (err) {
-        throw err;
-      }
-      console.log(results);
-      console.log(fields);
-      connection.end();
-    });
+    console.log("Connection succesful");
   }
 });
 
