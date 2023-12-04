@@ -16,7 +16,7 @@ app.listen(process.env.PORT, () => {
   console.log("app is running");
 });
 
-process.on("exit", () => {
+/*process.on("exit", () => {
   connection.end((err) => {
     if (err) {
       console.error("Error closing the database connection:", err);
@@ -24,4 +24,4 @@ process.on("exit", () => {
       console.log("Database connection closed.");
     }
   });
-});
+});*/
