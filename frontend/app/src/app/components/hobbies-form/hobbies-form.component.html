@@ -1,31 +1,30 @@
-<h2>Hobbies</h2>
-<form>
-  <label>Hobby1: </label>
-  <select
-    [(ngModel)]="selectedHobbies[0]"
-    [ngModelOptions]="{ standalone: true }"
-  >
-    <option value="null">None</option>
-    <option *ngFor="let hobby of hobbies">{{ hobby.hobby }}</option>
-  </select>
-  <br />
-  <label>Hobby2: </label>
-  <select
-    [(ngModel)]="selectedHobbies[1]"
-    [ngModelOptions]="{ standalone: true }"
-  >
-    <option value="null">None</option>
-    <option *ngFor="let hobby of hobbies">{{ hobby.hobby }}</option>
-  </select>
-  <br />
-  <label>Hobby3: </label>
-  <select
-    [(ngModel)]="selectedHobbies[2]"
-    [ngModelOptions]="{ standalone: true }"
-  >
-    <option value="null">None</option>
-    <option *ngFor="let hobby of hobbies">{{ hobby.hobby }}</option>
-  </select>
+<form class="content-container">
+  <div class="content" style="align-items: flex-end">
+    <h2>Your hobbies:</h2>
+  </div>
+  <div class="content">
+    <select
+      [(ngModel)]="selectedHobbies[0]"
+      [ngModelOptions]="{ standalone: true }"
+    >
+      <option *ngFor="let hobby of hobbies">{{ hobby.hobby }}</option>
+    </select>
+    <br />
+    <select
+      [(ngModel)]="selectedHobbies[1]"
+      [ngModelOptions]="{ standalone: true }"
+    >
+      <option *ngFor="let hobby of hobbies">{{ hobby.hobby }}</option>
+    </select>
+    <br />
+    <select
+      [(ngModel)]="selectedHobbies[2]"
+      [ngModelOptions]="{ standalone: true }"
+    >
+      <option *ngFor="let hobby of hobbies">{{ hobby.hobby }}</option>
+    </select>
+  </div>
+  <div class="content" style="align-items: flex-start">
+    <button type="submit" (click)="onSubmit()"></button>
+  </div>
 </form>
-
-<button type="submit" (click)="onSubmit()">Submit</button>
