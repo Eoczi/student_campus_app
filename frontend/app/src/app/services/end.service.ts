@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Hobby } from '../modules/hobby.module';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
@@ -7,7 +8,7 @@ import { Hobby } from '../modules/hobby.module';
 export class EndService {
   hobbies: Hobby[] = [];
 
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
   getHobbies() {
     return this.hobbies;
@@ -16,4 +17,8 @@ export class EndService {
   setHobbies(hobbies: Hobby[]) {
     this.hobbies = hobbies;
   }
+
+  /*sendSelectedHobbies(hobbies: Hobby[]) {
+    return this.http.post('/api/universities', hobbies);
+  }*/
 }
