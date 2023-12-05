@@ -5,7 +5,7 @@ const router = express.Router();
 //route that reads all universities and shows everything in a console/json
 router.get("/universities", function (req, res) {
   connection.query(
-    "SELECT * FROM bli5geofbyhmc9dozgct.University;",
+    "SELECT * FROM bli5geofbyhmc9dozgct.Faculty;",
     (error, results) => {
       if (error) {
         console.error("Error querying the database:", error);
