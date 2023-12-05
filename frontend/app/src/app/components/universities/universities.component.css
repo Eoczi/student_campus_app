@@ -30,6 +30,7 @@
   width: 173px;
   overflow: hidden;
   background-color: aliceblue;
+  border: 3px solid black;
 }
 
 .box1 img {
