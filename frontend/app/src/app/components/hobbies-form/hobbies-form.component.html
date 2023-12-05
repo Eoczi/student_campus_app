@@ -1,12 +1,13 @@
 <form class="content-container">
   <div class="content" style="align-items: flex-end">
-    <h2>Your hobbies:</h2>
+    <h1>Your hobbies:</h1>
   </div>
   <div class="content">
     <select
       [(ngModel)]="selectedHobbies[0]"
       [ngModelOptions]="{ standalone: true }"
     >
+      <option value="null">none</option>
       <option *ngFor="let hobby of hobbies">{{ hobby.hobby }}</option>
     </select>
     <br />
@@ -14,6 +15,7 @@
       [(ngModel)]="selectedHobbies[1]"
       [ngModelOptions]="{ standalone: true }"
     >
+      <option value="null">none</option>
       <option *ngFor="let hobby of hobbies">{{ hobby.hobby }}</option>
     </select>
     <br />
@@ -21,6 +23,7 @@
       [(ngModel)]="selectedHobbies[2]"
       [ngModelOptions]="{ standalone: true }"
     >
+      <option value="null">none</option>
       <option *ngFor="let hobby of hobbies">{{ hobby.hobby }}</option>
     </select>
   </div>
