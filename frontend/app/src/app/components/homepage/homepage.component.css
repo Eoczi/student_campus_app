@@ -1,0 +1,23 @@
+h1 {
+  font-size: 60px;
+}
+
+.button {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 3px solid aliceblue;
+  color: aliceblue;
+  cursor: pointer;
+  transition: color 0.5s;
+  transition: border 0.5s;
+}
+
+.button:hover {
+  color: #feddb6;
+  border-color: #feddb6;
+}
+
+a {
+  text-decoration: none;
+}
