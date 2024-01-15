@@ -1,6 +1,23 @@
-<div class="box-container">
+<div class="cards">
+  <div *ngFor="let faculty of faculties" class="card">
+    <img src="../../../assets/university_logo.jpg" />
+    <div class="card-content">
+      <h3 style="color: black">{{ faculty.name }}</h3>
+      <br />
+      <h4 style="color: black">{{ faculty.descriere }}</h4>
+      <h4 style="color: black">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu
+        maximus tellus, et accumsan urna. Donec rutrum purus nec viverra
+        posuere. Phasellus viverra lorem auctor accumsan eleifend
+      </h4>
+      <br />
+      <h4 style="color: black">Medie {{ faculty.mean }}</h4>
+    </div>
+  </div>
+</div>
+
+<!--div class="box-container">
   <div *ngFor="let faculty of faculties" class="content">
-    <!--div class="content"-->
     <div class="box1">
       <img src="../../../assets/university_logo.jpg" />
     </div>
@@ -11,6 +28,6 @@
       <br />
       <h4 style="color: black">Medie {{ faculty.mean }}</h4>
     </div>
-    <!--/div-->
+    </div>
   </div>
-</div>
+</div-->
