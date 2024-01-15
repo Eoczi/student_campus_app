@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Hobby } from '../../modules/hobby.module';
 import { HobbyService } from '../../services/hobbies.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -16,7 +16,11 @@ import { FormsModule } from '@angular/forms';
 export class HobbiesFormComponent {
   hobbies: Hobby[] = [];
   selectedHobbies: Hobby[] = [];
-  constructor(private service: HobbyService, private router: Router) {}
+  constructor(
+    private service: HobbyService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
     this.service.getHobbies().subscribe((data) => {
@@ -25,8 +29,12 @@ export class HobbiesFormComponent {
   }
 
   onSubmit() {
+    const queryParams = {
+      hobbies: this.selectedHobbies,
+    };
     this.router.navigate(['/universities'], {
-      queryParams: this.selectedHobbies,
+      queryParamsHandling: 'merge',
+      queryParams: queryParams,
     });
   }
 }

@@ -1,0 +1,17 @@
+<form class="content-container" (ngSubmit)="onSubmit()">
+  <div class="content" style="align-items: flex-end">
+    <h1>Your mean:</h1>
+  </div>
+  <div class="content">
+    <input
+      [(ngModel)]="mean"
+      [ngModelOptions]="{ standalone: true }"
+      type="text"
+      class="input-mean"
+      placeholder="Enter mean here..."
+    />
+  </div>
+  <div class="content" style="align-items: flex-start">
+    <button type="submit" (click)="onSubmit()"></button>
+  </div>
+</form>
